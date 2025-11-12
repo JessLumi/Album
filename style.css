@@ -38,12 +38,55 @@ ul {color: white;
     padding-left: 0;
 }
 .block-droite {
-    width: 20%;
+    width: 40%;
     text-align: right;
+    position: relative;
+    transition: transform 1s ease-in-out; 
 }
-.img-droite {
+.block-droite.active {
+    transform: translateX(-500px);
+    z-index: 10;
+}
+
+.album-wrapper {
+    width: 400px;
+    height: 400px;
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 1;
+    
+}
+.pochette,
+.vinyle {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    transition: transform 0.6s ease-out;
+}
+.pochette img,
+.vinyle img {
+    
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.vinyle {
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease-out;
+   
+}
+.pochette {
+    z-index: 2;
+}
+.album-wrapper.ouvert .vinyle {
+    transform: translateX(0px);
 }
 h2 {
     font-family: 'Open Sans Condensed Bold', sans-serif;
