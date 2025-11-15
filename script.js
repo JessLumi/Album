@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // 2. Déclenche la translation du bloc parent (.block-droite)
             blockDroite.classList.toggle('active'); 
+
         });
     }
-    // L'ancien code utilisant 'image' n'est plus nécessaire ici.
+    
 });
