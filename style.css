@@ -116,3 +116,24 @@ p {
 .video-wrapper {
     text-align: center;
 }
+
+#song-title {
+    position: absolute;
+    top: 165px;
+    right: 95px;
+    transform: none
+
+    color: #FFFFFF;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: 100;
+
+}
+
+.visible-title {
+    opacity: 1 !important;
+}

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const monAlbum = document.getElementById('monAlbum');
     // NOUVEAU : Récupérer l'élément vidéo
     const maVideo = document.getElementById('maVideo'); 
-    
+    const songTitle = document.getElementById('song-title');
     // La durée de transition la plus longue est 1000ms (1s) pour le block-droite.
     // On utilise un délai juste après cette transition.
     const DELAI_AVANT_APPARITION = 1000;
@@ -29,10 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
                     maVideo.classList.add('visible'); 
                     maVideo.play();
+                    songTitle.classList.add('visible-title');
                 }, DELAI_AVANT_APPARITION);
 
             } else { // Si l'album EST ouvert (il va SE REFERMER)
                 // 1. Masquer la vidéo immédiatement (ou avec un très court délai)
+                songTitle.classList.remove('visible-title');
                 maVideo.pause();
                 maVideo.classList.remove('visible');
 
