@@ -121,7 +121,7 @@ p {
     position: absolute;
     top: 165px;
     right: 95px;
-    transform: none
+    transform: none;
 
     color: #FFFFFF;
     font-size: 48px;
@@ -136,4 +136,18 @@ p {
 
 .visible-title {
     opacity: 1 !important;
+}
+
+.album-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.album-item img {
+    width: 150px;
+    height: 150px;
+    display: block;
 }
