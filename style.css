@@ -96,8 +96,8 @@ ul {color: white;
     cursor: pointer;
     margin-left: auto;
     z-index: 1;
-    
 }
+
 .pochette,
 .vinyle {
     position: absolute;
@@ -114,6 +114,12 @@ ul {color: white;
     height: 100%;
     display: block;
     object-fit: cover;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-wrapper:hover .pochette img {
+    transform: scale(1.08);
 }
 .vinyle {
     z-index: 1;
