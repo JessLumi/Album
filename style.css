@@ -64,8 +64,12 @@ h1 {
     width: 60%;
     margin: 0 10px;
 }
+
 ul {color: white;
     text-align: center;
+    font-family: 'Open Sans Condensed Bold', sans-serif;
+    font-size: 1.2em;
+    font-weight: normal;
 
 }
 .no-bullets {
@@ -170,6 +174,62 @@ p {
 }
 
 .visible-title {
+    opacity: 1 !important;
+}
+
+.audio-controls button {
+    width: 50px; 
+    height: 50px; 
+    margin: 0 10px;
+    border-radius: 50%; 
+    cursor: pointer;
+
+    background-color: transparent; 
+    border: 2px solid white; 
+    color: white; 
+
+    font-size: 20px; 
+    line-height: 1; 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: all 0.2s ease-in-out;
+}
+
+.audio-controls button:hover {
+    background-color: #EAEAEA; 
+    color: #0B3D4D; 
+    border-color: #EAEAEA; 
+    transform: scale(1.05); 
+}
+
+.audio-controls button:active {
+    background-color: #0B3D4D; 
+    color: #EAEAEA; 
+    transform: scale(0.95); 
+}
+
+.audio-controls button.is-playing {
+    background-color: #1A5865; 
+    border-color: #EAEAEA; 
+}
+
+.audio-controls button:not(.is-playing) {
+    opacity: 0.7; 
+}
+
+.audio-controls {
+    position: absolute;
+    top: 370px;
+    right: 200px;
+    z-index: 100;
+
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.visible-controls {
     opacity: 1 !important;
 }
 
